@@ -42,7 +42,7 @@
         font-size: 12px;
         transition: 2s;
         flex-direction: column;
-        
+        border: 1px solid #fff;
     }
     .btn:hover {
         background: #fFFFFF;
