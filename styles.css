@@ -1,0 +1,56 @@
+ body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        background: #000;
+    }
+
+    /* Fondo de partículas */
+    #particles-js {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    /* Caja de botones */
+    .container {
+        padding: 20px;
+        border-radius: 15px;
+    }
+
+    /* Botones */
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin: 5px;
+        padding: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        background: #333;
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        transition: 2s;
+        flex-direction: column;
+        
+    }
+    .btn:hover {
+        background: #fFFFFF;
+        transform: scale(1.05);
+        color: #000;
+        transition: background-color 2s;
+    }
+    .btn i {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
