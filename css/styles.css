@@ -66,7 +66,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(22, 22, 22, 0.2);
     border: 2px solid rgba(255, 255, 255, 0.3);
     color: white;
     font-size: 20px;
@@ -143,29 +143,35 @@ body.theme-default .btn:hover {
 
 /* Tema con Imagen de Fondo */
 body.theme-image {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+    background: 
+        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'),
+        url('https://images.unsplash.com/photo-1519904981063-b0cf448d479e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'),
+        linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
 }
 
 body.theme-image .btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    backdrop-filter: blur(10px);
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.25) !important;
+    border: 1px solid rgba(255, 255, 255, 0.6) !important;
+    color: white !important;
+    backdrop-filter: blur(15px);
+    opacity: 0.95;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 body.theme-image .btn:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.4) !important;
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.10);
+    color: white !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
-body.theme-image .container {
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
+
 
 /* Responsive */
 @media (max-width: 768px) {

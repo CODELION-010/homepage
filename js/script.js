@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (theme === 'image') {
             particleColor = "#ffffff";
-            particleCount = 150; // Menos partículas para no sobrecargar la imagen
+            particleCount = 50; // Muy pocas partículas para que la imagen se vea completamente
         }
         
         particlesJS("particles-js", {
@@ -76,13 +76,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 "size": { "value": 3 },
                 "move": { "speed": 2 },
                 "line_linked": { 
-                    "enable": true,
+                    "enable": theme !== 'image', // Desactivar líneas en tema de imagen
                     "color": particleColor,
-                    "opacity": theme === 'image' ? 0.3 : 0.4
+                    "opacity": theme === 'image' ? 0.1 : 0.4
                 },
                 "color": { "value": particleColor },
                 "opacity": {
-                    "value": theme === 'image' ? 0.5 : 0.8
+                    "value": theme === 'image' ? 0.2 : 0.8
                 }
             }
         });
