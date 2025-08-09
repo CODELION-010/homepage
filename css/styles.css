@@ -48,9 +48,139 @@
         background: #fFFFFF;
         transform: scale(1.05);
         color: #000;
-        transition: background-color 2s;
     }
     .btn i {
         font-size: 30px;
         margin-bottom: 5px;
     }
+
+/* Selector de Temas */
+.theme-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.theme-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.theme-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+.theme-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 150px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.theme-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.theme-option {
+    display: block;
+    width: 100%;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    font-size: 14px;
+}
+
+.theme-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.theme-option i {
+    margin-right: 8px;
+}
+
+/* Tema Principal (por defecto) */
+body.theme-default {
+    background: #000;
+}
+
+body.theme-default .btn {
+    background: #333;
+    border: 1px solid #fff;
+    color: white;
+}
+
+body.theme-default .btn:hover {
+    background: #ffffff;
+    color: #000;
+}
+
+/* Tema con Imagen de Fondo */
+body.theme-image {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+}
+
+body.theme-image .btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    backdrop-filter: blur(10px);
+    opacity: 0.8;
+}
+
+body.theme-image .btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+body.theme-image .container {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-selector {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .theme-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+    
+    .theme-menu {
+        min-width: 120px;
+    }
+}
