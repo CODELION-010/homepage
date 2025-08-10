@@ -11,8 +11,8 @@ pipeline {
         stage('Detener y eliminar contenedor') {
             steps {
                 sh '''
-                    docker compose stop homepage
-                    docker compose rm -f homepage
+                    docker-compose stop homepage
+                    docker-compose rm -f homepage
                 '''
             }
         }
@@ -20,7 +20,7 @@ pipeline {
         stage('Reconstruir y levantar contenedor') {
             steps {
                 sh '''
-                    docker compose up -d --build homepage
+                    docker-compose up -d --build homepage
                 '''
             }
         }
