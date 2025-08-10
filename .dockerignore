@@ -1,0 +1,40 @@
+# Git
+.git
+.gitignore
+
+# Docker
+dockerfile
+docker-compose.yml
+DOCKER-COMPOSE.YML
+.dockerignore
+
+# Documentation
+README.md
+*.md
+
+# CI/CD
+Jenkinsfile
+.jenkins
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (si los hubiera)
+node_modules/
+npm-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.production
