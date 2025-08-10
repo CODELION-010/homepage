@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git branch: 'main', url: 'https://tu-repositorio.git'
+                git branch: 'main', url: 'https://github.com/CODELION-010/homepage.git'
             }
         }
 
