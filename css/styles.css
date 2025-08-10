@@ -71,7 +71,7 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.80s ease;
     backdrop-filter: blur(10px);
 }
 
