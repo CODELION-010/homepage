@@ -71,13 +71,13 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
-    transition: all 0.80s ease;
+    transition: all 2s ease;
     backdrop-filter: blur(10px);
 }
 
 .theme-btn:hover {
     background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.1);
+    transform: scale(2);
 }
 
 .theme-menu {
